@@ -1,0 +1,30 @@
+18:26:10 **** Incremental Build of configuration Debug for project HW7 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:5:8: warning: type defaults to 'int' in declaration of 'autotest' [-Wimplicit-int]
+ extern autotest(void);
+        ^~~~~~~~
+../src/main.c: In function 'TIM3_IRQHandler':
+../src/main.c:83:9: warning: unused variable 'dummy' [-Wunused-variable]
+     int dummy;
+         ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: HW7.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HW7.elf" @"objects.list" /Users/terrencerandall/Documents/Fall_19/ece362/workspace/HW7/src/autotest.o  -lm
+Finished building target: HW7.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "HW7.elf" "HW7.bin"
+arm-none-eabi-size "HW7.elf"
+   text	   data	    bss	    dec	    hex	filename
+  37012	   2500	    256	  39768	   9b58	HW7.elf
+ 
+
+18:26:11 Build Finished (took 508ms)
+

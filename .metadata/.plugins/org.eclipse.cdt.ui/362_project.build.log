@@ -1,0 +1,124 @@
+23:50:16 **** Incremental Build of configuration Debug for project 362_project ****
+make -j3 all 
+Building file: ../src/graphic.c
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/core" -Os -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/graphic.d" -MT"src/graphic.o" -o "src/graphic.o" "../src/graphic.c"
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/core" -Os -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Building file: ../src/parsing.c
+Invoking: MCU GCC Compiler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/core" -Os -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/parsing.d" -MT"src/parsing.o" -o "src/parsing.o" "../src/parsing.c"
+../src/main.c: In function 'graph':
+../src/main.c:219:9: warning: implicit declaration of function 'GLCD_SetPixel'; did you mean 'RTC_SetTime'? [-Wimplicit-function-declaration]
+         GLCD_SetPixel(i,32,'b');
+         ^~~~~~~~~~~~~
+         RTC_SetTime
+../src/main.c:233:9: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+     int flag = 0;
+         ^~~~
+../src/main.c: In function 'main':
+../src/main.c:264:10: warning: unused variable 'clear' [-Wunused-variable]
+     char clear[21] = "                     ";
+          ^~~~~
+Finished building: ../src/graphic.c
+ 
+../src/parsing.c: In function 'getGraphValue':
+../src/parsing.c:35:15: warning: implicit declaration of function 'get_char_key'; did you mean '_getchar_r'? [-Wimplicit-function-declaration]
+         key = get_char_key();
+               ^~~~~~~~~~~~
+               _getchar_r
+../src/parsing.c:112:9: warning: implicit declaration of function 'GLCD_GoTo'; did you mean 'GLCD_Line'? [-Wimplicit-function-declaration]
+         GLCD_GoTo(0,6);
+         ^~~~~~~~~
+         GLCD_Line
+Building file: ../src/parsingutility.c
+../src/parsing.c:113:9: warning: implicit declaration of function 'GLCD_WriteString'; did you mean 'GPIO_WriteBit'? [-Wimplicit-function-declaration]
+         GLCD_WriteString(displayString);
+         ^~~~~~~~~~~~~~~~
+         GPIO_WriteBit
+Invoking: MCU GCC Compiler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/CMSIS/core" -Os -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/parsingutility.d" -MT"src/parsingutility.o" -o "src/parsingutility.o" "../src/parsingutility.c"
+../src/parsing.c: In function 'calculations':
+../src/parsing.c:277:9: warning: implicit declaration of function 'GLCD_ClearRow'; did you mean 'GLCD_Circle'? [-Wimplicit-function-declaration]
+         GLCD_ClearRow(2);
+         ^~~~~~~~~~~~~
+         GLCD_Circle
+../src/parsing.c:152:10: warning: unused variable 'dummy' [-Wunused-variable]
+     char dummy[100];
+          ^~~~~
+../src/parsing.c: In function 'graphingFunc':
+../src/parsing.c:1009:5: warning: implicit declaration of function 'GLCD_ClearScreen'; did you mean 'GLCD_Circle'? [-Wimplicit-function-declaration]
+     GLCD_ClearScreen();
+     ^~~~~~~~~~~~~~~~
+     GLCD_Circle
+../src/parsing.c:1055:9: warning: implicit declaration of function 'GLCD_SetPixel'; did you mean 'RTC_SetTime'? [-Wimplicit-function-declaration]
+         GLCD_SetPixel(i,yaxispos,'b');
+         ^~~~~~~~~~~~~
+         RTC_SetTime
+../src/parsing.c:1106:12: warning: variable 'yval' set but not used [-Wunused-but-set-variable]
+     double yval = 0;
+            ^~~~
+../src/parsing.c:995:13: warning: unused variable 'Nans' [-Wunused-variable]
+     uint8_t Nans = 0;
+             ^~~~
+../src/parsing.c:994:13: warning: unused variable 'q' [-Wunused-variable]
+     uint8_t q;
+             ^
+../src/parsingutility.c:12:2: warning: "/*" within comment [-Wcomment]
+ //**********************************************
+   
+../src/parsingutility.c:15:2: warning: "/*" within comment [-Wcomment]
+ //**********************************************
+   
+../src/main.c:322:13: warning: 'strcpy' writing 22 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+             strcpy(line1,">                    ");
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:323:13: warning: 'strcpy' writing 22 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+             strcpy(line2,"                     ");
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:335:13: warning: 'strcpy' writing 22 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+             strcpy(line2,"                     ");
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:372:13: warning: 'strcpy' writing 22 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+             strcpy(line1,">                    ");
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:373:13: warning: 'strcpy' writing 22 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+             strcpy(line2,"                     ");
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/parsing.c: In function 'getGraphValue':
+../src/parsing.c:103:29: warning: 'lastAdded' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 domainInput -= lastAdded;
+                 ~~~~~~~~~~~~^~~~~~~~~~~~
+Finished building: ../src/parsingutility.c
+ 
+Finished building: ../src/main.c
+ 
+../src/parsing.c: In function 'stackManipulation':
+../src/parsing.c:969:29: warning: 'strcpy' writing 23 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+                             strcpy(tempString,"ANS                   ");
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/parsing.c:979:25: warning: 'strcpy' writing 23 bytes into a region of size 21 overflows the destination [-Wstringop-overflow=]
+                         strcpy(tempString,"RtoD(                 ");
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/parsing.c
+ 
+Building target: 362_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -u _printf_float -T"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/362_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "362_project.elf" @"objects.list"   -lm
+Finished building target: 362_project.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "362_project.elf" "362_project.bin"
+arm-none-eabi-size "362_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  57156	   2532	   3904	  63592	   f868	362_project.elf
+ 
+
+23:50:17 Build Finished (took 1s.285ms)
+

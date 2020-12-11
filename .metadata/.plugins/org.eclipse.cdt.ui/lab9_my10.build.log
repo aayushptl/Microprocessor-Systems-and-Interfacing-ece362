@@ -1,0 +1,23 @@
+14:50:12 **** Incremental Build of configuration Debug for project lab9_my10 ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: lab9_my10.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab9_my10.elf" @"objects.list" /Users/terrencerandall/Documents/Fall_19/ece362/workspace/lab9_my10/src/helper.o  -lm
+Finished building target: lab9_my10.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab9_my10.elf" "lab9_my10.bin"
+arm-none-eabi-size "lab9_my10.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12088	   2144	    524	  14756	   39a4	lab9_my10.elf
+ 
+
+14:50:12 Build Finished (took 387ms)
+

@@ -1,0 +1,6 @@
+20:08:07 **** Incremental Build of configuration Debug for project stm32f0_test ****
+make -j3 all 
+make: Nothing to be done for `all'.
+
+20:08:07 Build Finished (took 179ms)
+

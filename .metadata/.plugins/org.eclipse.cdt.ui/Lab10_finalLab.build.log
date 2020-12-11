@@ -1,0 +1,40 @@
+19:13:29 **** Incremental Build of configuration Debug for project Lab10_finalLab ****
+make -j3 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F051R8Tx -DSTM32F0DISCOVERY -DDEBUG -DSTM32F051 -DUSE_STDPERIPH_DRIVER -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:28:0: warning: "M_PI" redefined
+ #define M_PI 3.14159
+ 
+In file included from ../src/main.c:6:0:
+/Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.17.0.201812190825/tools/compiler/arm-none-eabi/include/math.h:617:0: note: this is the location of the previous definition
+ #define M_PI  3.14159265358979323846
+ 
+../src/main.c: In function 'action':
+../src/main.c:389:33: warning: implicit declaration of function 'atoi'; did you mean 'acos'? [-Wimplicit-function-declaration]
+                 changingValue = atoi(words[1]);
+                                 ^~~~
+                                 acos
+../src/main.c: In function 'projAction':
+../src/main.c:472:18: warning: implicit declaration of function 'atof'; did you mean 'acosf'? [-Wimplicit-function-declaration]
+     float arg1 = atof(words[0]);
+                  ^~~~
+                  acosf
+Finished building: ../src/main.c
+ 
+Building target: Lab10_finalLab.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Lab10_finalLab.elf" @"objects.list" /Users/terrencerandall/Documents/Fall_19/ece362/workspace/Lab10_finalLab/src/helper_theOne.o  -lm
+Finished building target: Lab10_finalLab.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Lab10_finalLab.elf" "Lab10_finalLab.bin"
+arm-none-eabi-size "Lab10_finalLab.elf"
+   text	   data	    bss	    dec	    hex	filename
+  54272	   2508	   2528	  59308	   e7ac	Lab10_finalLab.elf
+ 
+
+19:13:30 Build Finished (took 500ms)
+

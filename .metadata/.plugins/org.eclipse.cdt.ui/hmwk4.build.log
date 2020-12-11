@@ -1,0 +1,23 @@
+17:18:56 **** Incremental Build of configuration Debug for project hmwk4 ****
+make -j3 all 
+Building file: ../src/hw4.s
+Invoking: MCU GCC Assembler
+/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/Debug
+arm-none-eabi-as -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/Utilities" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/StdPeriph_Driver/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/inc" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/CMSIS/device" -I"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/CMSIS/core" -g -o "src/hw4.o" "../src/hw4.s"
+Finished building: ../src/hw4.s
+ 
+Building target: hmwk4.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"/Users/terrencerandall/Documents/Fall_19/ece362/workspace/hmwk4/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "hmwk4.elf" @"objects.list"   -lm
+Finished building target: hmwk4.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "hmwk4.elf" "hmwk4.bin"
+arm-none-eabi-size "hmwk4.elf"
+   text	   data	    bss	    dec	    hex	filename
+  34988	   2500	    256	  37744	   9370	hmwk4.elf
+ 
+
+17:18:56 Build Finished (took 264ms)
+
